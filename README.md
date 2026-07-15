@@ -1,11 +1,12 @@
 
-# openlog-rotating  [![Build](https://github.com/christopher-gritton/openlog-rotating/actions/workflows/dotnet.yml/badge.svg)](https://github.com/christopher-gritton/openlog-rotating/actions/workflows/dotnet.yml)
+# cglibs-logging  [![Build](https://github.com/christopher-gritton/cglibs-logging/actions/workflows/dotnet.yml/badge.svg)](https://github.com/christopher-gritton/cglibs-logging/actions/workflows/dotnet.yml)
 Rotating file logging library for C#
 
 This library is a simple file logging library that supports log rotation. It can be used with or without Microsoft.Extensions.Logging.
 The number of days to keep the log files can be configured. The library will automatically delete log files older than the specified number of days.
 The maximum file size for a log file before it is rotated can also be configured. The library will automatically rotate the log file when the maximum file size is reached.
 
+### Reworking namespaces!!! Root namespace will be getting updated to `CGLibs.Logging`
 
 ## Usage with Microsoft.Extensions.Logging
 
