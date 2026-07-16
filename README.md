@@ -114,9 +114,9 @@ class Program
 
 ```csharp
 
-using ElkCreekServices.OpenScripts.Logging;
+using CGLibs.Logging;
 
-namespace ElkCreekServices.OpenScripts.Logging.Example;
+namespace CGLibs.Logging.Example;
 
 class Program
 {
