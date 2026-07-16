@@ -12,9 +12,9 @@ The maximum file size for a log file before it is rotated can also be configured
 
 ```csharp
 
-using ElkCreekServices.OpenScripts.Logging;
+using CGLibs.Logging;
 
-namespace ElkCreekServices.OpenScripts.Logging.Example;
+namespace CGLibs.Logging.Example;
 
 class Program
 {
@@ -25,7 +25,7 @@ class Program
             builder
                 .AddFilter("Microsoft", LogLevel.Warning)
                 .AddFilter("System", LogLevel.Warning)
-                .AddFilter("OpenScripts.Logging.Example", LogLevel.Warning) // set the log level for this namespace
+                .AddFilter("CGLibs.Logging.Example", LogLevel.Warning) // set the log level for this namespace
                 .AddRotatingFileLogger(config =>
                 {
                     //add a new configuration for the logger
