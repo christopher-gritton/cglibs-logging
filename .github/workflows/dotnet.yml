@@ -27,15 +27,15 @@ jobs:
     - name: Display dotnet version
       run: dotnet --version
     - name: Install dependencies
-      working-directory: ./ElkCreekServices.OpenScripts.Logging
+      working-directory: ./CGLibs.Logging
       run: dotnet restore
     - name: Build
-      working-directory: ./ElkCreekServices.OpenScripts.Logging
+      working-directory: ./CGLibs.Logging
       run: dotnet build --configuration Release
     - name: Pack
-      working-directory: ./ElkCreekServices.OpenScripts.Logging/ElkCreekServices.OpenScripts.Logging
-      run: dotnet pack --configuration Release ElkCreekServices.OpenScripts.Logging.csproj
+      working-directory: ./CGLibs.Logging/CGLibs.Logging
+      run: dotnet pack --configuration Release CGLibs.Logging.csproj
     - name: Push
-      working-directory: ./ElkCreekServices.OpenScripts.Logging/ElkCreekServices.OpenScripts.Logging/bin/Release
+      working-directory: ./CGLibs.Logging/CGLibs.Logging/bin/Release
       run: dotnet nuget push *.nupkg --skip-duplicate -k ${{ secrets.OPENLOG_PACKAGE_TOKEN }} --source "github"
 
